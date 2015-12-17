@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block header %}
+<header>
+	<a href="{{ url_for('website.home') }}"><img class='logo' src="{{ url_for('static', filename='logo.png') }}"/></a>
+	<ul id="menu">
+		<li><a class="menu" href="{{ url_for('website.about') }}">About</a></li>
+		<li><a class="menu" href="{{ url_for('website.projects') }}">Projects</a></li>
+		<li><a class="menu" href="{{ url_for('website.home') }}">Home</a></li>
+		<li><a class="menu" href="{{ url_for('posts') }}">Blog</a></li>
+	</ul>
+</header> 
+{% endblock %}
+<body>
+{% block content %}
+	<div class="jumbo_contact">
+		<h2>Contact</h2>
+	</div>
+	<div id="contact">
+	{% if success %}
+		<p>Thank you for your message. I'll get back to you shortly.</p>
+	
+	{% else %}
+  
+		{% for message in form.name.errors %}
+			<div class="flash">{{ message }}</div>
+		{% endfor %}
+ 
+		{% for message in form.email.errors %}
+			<div class="flash">{{ message }}</div>
+		{% endfor %}
+ 
+		{% for message in form.subject.errors %}
+			<div class="flash">{{ message }}</div>
+		{% endfor %}
+ 
+		{% for message in form.message.errors %}
+			<div class="flash">{{ message }}</div>
+		{% endfor %}
+   
+		<form action="{{ url_for('contact') }}" method=post>
+			{{ form.hidden_tag() }}
+ 
+			{{ form.name.label }}
+			{{ form.name }}
+ 
+			{{ form.email.label }}
+			{{ form.email }}
+ 
+			{{ form.subject.label }}
+			{{ form.subject }}
+ 
+			{{ form.message.label }}
+			{{ form.message }}
+ 
+			{{ form.submit }}
+		</form>
+	</div>
+	{% endif %}
+{% endblock %}
+</body>

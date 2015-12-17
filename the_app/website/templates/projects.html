@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+{% block head %}
+    <title>Lani Gouws</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicebox.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
+{% block header %}
+<header>
+    <a href="{{ url_for('website.home') }}"><img class='logo' src="{{ url_for('static', filename='logo.png') }}"/></a>
+    <ul id="menu">
+        <li><a class="menu" href="{{ url_for('website.about') }}">About</a></li>
+        <li><a class="menu" href="{{ url_for('website.home') }}">Home</a></li>
+        <li><a class="menu" href="{{ url_for('website.contact') }}">Contact</a></li>
+        <li><a class="menu" href="{{ url_for('posts') }}">Blog</a></li>
+    </ul>
+</header>
+{% endblock %}
+<body>
+{% block content %}
+    <div class="wrapper">
+       	<ul id="sb-slider" class="sb-slider">
+         		<li>
+         				<img src="{{ url_for('static', filename='img/0.jpg') }}" alt="image1"/>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/1.jpg') }}" alt="image1"/>
+         				<div class="sb-description">
+     		    				<p><strong>Link-a-Lot Page1</strong><br/>
+           					A website that holds links to many of the resources I used to educate myself.<br/>
+             				<strong>Technologies used: </strong>Python, Flask, HTML5, CSS3</p>
+         				</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/2.jpg') }}" alt="image2"/>
+           			<div class="sb-description">
+             				<p><strong>Link-a-Lot Page2</strong><br/>
+             				<strong>Find the full code here:</strong><a class="menu" href="https://github.com/Lanigo/Link-a-lot-Simple-Flask-website"> Github</a><br/>
+             				It runs on <a class="menu" class="menu" href="http://myflaskapp-lanigouws.rhcloud.com">Openshift</a></p>
+           			</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/3.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>Rugby Refs Page1</strong><br/>
+             				A web app which was created to keep track of referee statistics during Rugby World Cup 2015.<p>
+           			</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/4.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>Rugby Refs Page2</strong><br/>
+             				<strong>Technologies used: </strong>Python, Flask, SQLite3 HTML5, CSS3, Bootstrap3</p>
+         				</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/5.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>Rugby Refs Page3</strong><br/>
+             				<strong>Find the full code here:</strong><a class="menu" href="https://github.com/Lanigo/Rugby-Refs-Flask"> Github</a><br/>
+             				It runs on <a class="menu" href="http://lani.pythonanywhere.com">PythonAnywhere</a></p>
+           			</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/6.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>PyQt Text Editor Page1</strong><br/>
+             				A text editor created with Qt and Python.<br/>
+             				<strong>Technologies used: </strong>Python, PyQt4<br/>
+             				</p>
+           			</div>
+         		</li>
+       			<li>
+           			<img src="{{ url_for('static', filename='img/7.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>PyQt Text Editor Page2</strong><br/>
+             				<strong>Find the full code here: </strong><a class="menu" href="https://github.com/Lanigo/Writer-PyQt-Text-Editor">Github</a></p>
+           			</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/8.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>Babble Meteor Chat App Page1</strong><br/>
+             				A single page chat app.<br/>
+             				<strong>Technologies used: </strong>JavaScript, Meteor.js, MongoDB, HTML5, CSS3</p>
+           			</div>
+         		</li>
+         		<li>
+           			<img src="{{ url_for('static', filename='img/9.jpg') }}" alt="image1"/>
+           			<div class="sb-description">
+             				<p><strong>Babble Meteor Chat App Page2</strong><br/>
+             				<strong>Find the full code here:</strong><a class="menu" href="https://github.com/Lanigo/Meteor-chat-app-Babble"> Github</a><br/>
+             				It runs on <a class="menu" href="http://lgbabble.meteor.com/">Meteor</a></p>
+           			</div>
+         		</li>
+            <li>
+                <img src="{{ url_for('static', filename='img/10.png') }}" alt="image1"/>
+                <div class="sb-description">
+                    <p><strong>Django Website with Shop and Blog Page1</strong><br/>
+                    <p>This is a full website with a blog and also a fully functioning shop using django-shop.</p>
+               </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/11.png') }}" alt="image1"/>
+                <div class="sb-description">
+                    <p><strong>Django Website with Shop and Blog Page2</strong><br/>
+                    <strong>Technologies used: </strong>Python, Django, MySQL(PostgreSQL for Heroku deployment), HTML5, CSS3</p>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/12.png') }}" alt="image1"/>
+                <div class="sb-description">
+                    <p>Unfortunately, you can not see the images on Heroku, because I can not pay for a CDN.</p>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/13.png') }}" alt="image1"/>
+                <div class="sb-description">
+                    <p><strong>Django Website with Shop and Blog Page4</strong><br/>
+                    <p>The shop has a list view, detail view, shopping cart, as well as a shipping and billing system.</p>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/14.png') }}" alt="image1"/>
+                <div class="sb-description">
+                    <p><strong>Django Website with Shop and Blog Page5</strong><br/>
+                    <strong>Find the full code here:</strong><a class="menu" href="https://github.com/Lanigo/Django-website-with-shop-and-blog"> Github</a><br/>
+                    It runs on <a class="menu" href="https://lanidjango.herokuapp.com/">Heroku</a></p>
+                </div>
+            </li>
+       	</ul>
+
+       	<div id="shadow" class="shadow"></div>
+
+       	<div id="nav-arrows" class="nav-arrows">
+         		<a href="#">Next</a>
+         		<a href="#">Previous</a>
+       	</div>
+
+       	<div id="nav-dots" class="nav-dots">
+         		<span class="nav-dot-current"></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+         		<span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+       	</div>
+    </div><!-- /wrapper -->
+</body>
+{% endblock %}
+{% block javascript %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/modernizr.custom.46884.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.slicebox.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/slider.js') }}"></script>
+{% endblock %}

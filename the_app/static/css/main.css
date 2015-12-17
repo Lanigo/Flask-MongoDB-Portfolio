@@ -1,0 +1,413 @@
+/* Main Style */
+
+* {
+	font-family: "Comfortaa", Arial, sans-serif;
+}
+
+h1 {
+	font-size: 4.6em;
+	color: #3d001b;
+}
+
+h2 {
+	font-size: 3.7em;
+	color: #3d001b;
+}
+
+h3 {
+	font-size: 2.5em;
+	color: #124c5f;
+}
+
+h4 {
+	margin-bottom: 2%;
+	font-size: 1.8em;
+	color: #801444;
+}
+
+h4.blog {
+	margin-bottom: 2%;
+	font-size: 1.8em;
+	color: #3d001b;	
+}
+
+p { 
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+a:link {
+	color: #9f2b5e;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #9f2b5e;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3e7689;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+a:active {
+	color: #3d001b;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	padding: 2.5%;
+	background-color: #124c5f;
+	font-size:100%;
+}
+
+.logo {
+	float: right;
+	width: 20%;
+	height: 40%;
+	margin-right: 5%;
+	margin-top: 2.5%;
+	background-color: transparent;
+}
+
+a.menu:link {
+	color: #3d001b;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+a.menu:visited {
+	color: #3d001b;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+a.menu:hover {
+	color: #3e7689;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+a.menu:active {
+	color: #801444;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+#menu {
+	display: inline;
+	font-size: 100%;
+}
+
+#menu ul {list-style-type: none; padding: 0; margin: 0;}
+#menu li {display: inline-block;}
+#menu a {
+	display: block;
+	width: 11vw;
+	height: 11vw;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px #3e7689 solid;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 2vw;
+	text-align: center;
+	line-height: 11vw;
+}
+
+.container {
+	width: 90%;
+	font-size: 100%;
+}
+
+.jumbo1 {
+	width: 50%;
+	height:60%;
+	padding: 2% 5% 2% 5%;
+	font-size:100%;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.jumbo2 {
+	background-color: #9f2b5e;
+	width:20%;
+	padding-left: 5%;
+	padding-right: 5%;
+	float: right;
+	font-size: 100%;
+	display: inline-block;
+}
+
+.jumbo3 {
+	clear: both;
+	margin: 0 5% 0 5%;
+	width: 90%;
+}
+
+.jumbo {
+	vertical-align: bottom;
+}
+
+.jumbo_about {
+	margin: 2.5%;
+}
+
+.jumbo_contact {
+	margin: 2.5%;
+}
+
+div.footer {
+	clear: right;
+	width: 100%;
+	height: 3em;
+	margin-top:8%;
+	background-color: #3d001b;
+	color: #ffffff;
+	text-align: center;
+}
+
+img.contact {
+	width: 50%;
+	height: 100%;
+	margin: 15%;
+	border:none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* About Page CSS */
+.square_block {
+	padding-left: 2.5%;
+}
+
+.squares {
+	width:280px;
+	height:280px;	
+	border:4px solid #222;	
+	margin: 2.5% 0.75% 2.5% 0;
+	font-size: 100%;
+	
+	
+	/* required to hide the image after resized */
+	overflow:hidden;
+	
+	/* for child absolute position */
+	position:relative;
+	
+	/* display div in line */
+	float:left;
+	cursor:hand; cursor:pointer;
+}
+
+	.squares img {
+		border:0;
+	
+		/* allow javascript moves the img position*/
+		position:absolute;
+		z-index:200;
+	}
+
+	.squares .caption {
+		position:absolute;
+		z-index:0;	
+		color:#ccc;
+		display:block;
+	}
+
+		.squares .caption h4 {
+			font-size:12px;
+			padding:10px 5px 0 8px;
+			margin:0;
+			color:#369ead;
+		}
+
+/* Setting for corners */
+
+.topLeft, .topRight, .bottomLeft, .bottomRight {
+	position:absolute;
+	background-repeat: no-repeat; 
+	float:left;
+}
+
+.topLeft {
+	background-position: top left; 	
+} 
+
+.topRight {
+	background-position: top right; 
+} 
+
+.bottomLeft {
+	background-position: bottom left; 
+} 
+
+.bottomRight {
+	background-position: bottom right; 
+}
+
+.clear {
+	clear:both;	
+}
+
+p.about {
+	color: #000000;
+	margin: 2.5%;
+	font-size: .8em;
+	line-height: 1.5em;
+}
+
+/* Contact form */
+form label {
+	color: #3d001b;
+	font-size: 1.5em;
+	font-weight: bold;
+	display: block;
+	padding: 10px 0;
+	margin-left: 3%;
+}
+	
+form input#name,
+form input#email,
+form input#subject {
+	width: 80%;
+	background-color: #fafafa;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #3d001b;
+	margin-left: 3%;
+	padding: 5px;
+	font-size: 1.1em;
+}
+	
+form textarea#message {
+	width: 80%;
+	height: 20%;
+	background-color: #fafafa;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #3d001b;
+	margin-bottom: 10px;
+	padding: 5px;
+	font-size: 1.1em;
+	margin-left: 3%;
+}
+	
+form input#submit {
+	-webkit-border-radius: 10;
+  	-moz-border-radius: 10;
+  	border-radius: 10px;
+  	-webkit-box-shadow: 0px 1px 3px #124c5f;
+  	-moz-box-shadow: 0px 1px 3px #124c5f;
+  	box-shadow: 0px 1px 3px #124c5f;
+  	font-family: "Comfortaa" Arial sans-serif;
+  	color: #fff;
+  	font-size: 20px;
+  	padding: 10px;
+  	background: #3d001b;
+  	text-decoration: none;
+}
+
+	
+form input#submit:hover{
+	cursor: pointer;
+  	background: #9f2b5e;
+  	text-decoration: none;
+}
+
+/* Blog CSS */
+p.details {
+  	margin-top: 2em;
+  	color: #3d001b;
+  	font-weight: bold;
+}
+
+hr {
+  	border: 1px solid outset;
+  	background-color: #3d001b;
+  	color: #3d001b;
+  	height: 5px;
+  	width: 100%
+}
+
+.title {
+  	width: 100%;
+  	height: 100%;
+  	font-size: 100%;
+  	background-color: #124c5f
+}
+
+a.post {
+  	font-size: 1.5em;
+}
+
+.content {
+  	width: 90%;
+  	margin: 0 5% 5% 5%;
+  	padding: 5%;
+  	font-size: 100%;
+}
+
+textarea#body {
+  	width: 90%;
+}
+
+input#author {
+	width: 50%;
+	height: 2em;
+}
+
+pre {
+  	margin-left: 10%;
+  	font-family: "Courier", serif;
+  	font-size: .8em;
+  	color: #ffffff;
+  	background-color: #124c5f;
+  	overflow: scroll;
+}
+
+code {
+    font-family: "Courier", serif;
+    font-size: .8em;
+  	color: #ffffff;
+  	background-color: #124c5f;
+}
+
+/* Admin CSS */
+th, tr{
+	border: 5px solid #124c5F;
+	padding: 2%;
+}
+
+td {
+	width: 15%;
+	border: 5px solid #124c5f;
+	padding: 2%;
+}
+
+@media only screen and (max-width: 30em) {
+	.container, .jumbo, header, #menu, .jumbo1, .jumbo2, .title, .content, .sb-description { font-size:80%;}
+	h1, h2, h3, h4, p, a, ul, h4.blog {font-size: 80%;}
+}
+
+@media only screen and (max-width: 40em) {
+	.container, .jumbo, header, #menu, .jumbo1, .jumbo2, .title, .content, .sb-description{ font-size:90%;}
+	h1, h2, h3, h4, p, a, ul, h4.blog {font-size: 90%;}
+}  
+					
+@media only screen and (max-width: 50em) {
+	.container, .jumbo, header, #menu, .jumbo1, .jumbo2, .title, .content, .sb-description{ font-size:100%;}
+	h1, h2, h3, h4, p, a, ul. h4.blog {font-size: 100%;}
+}

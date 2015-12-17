@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% import '_forms.html' as forms %}
+
+{% block page_header %}
+	<div class="title">
+		<h4 class="blog">{{ post.title |markdown }}</h4>
+	</div>
+{% endblock %}
+
+<div class="content">
+{% block content %}
+	{% if post.body %}
+		{% if post.post_type == 'Quote' %}
+			<blockquote>{{ post.body|markdown }}</blockquote>
+			<p>{{ post.author }}</p>
+		{% else %}
+			<p>{{ post.body|markdown }}</p>
+		{% endif %}
+	{% endif %}
+	{% if post.embed_code %}
+		{{ post.embed_code|safe() }}
+	{% endif %}
+	{% if post.image_url %}
+		<p><img src="{{ post.image_url }}" /><p>
+	{% endif %}
+	<p class="details">{{ post.created_at.strftime('%H:%M %Y-%m-%d') }}</p>
+	<hr/>
+	<h4>Comments</h4>
+	{% if post.comments %}
+		{% for comment in post.comments %}
+			 <p>{{ comment.body }}</p>
+			 <p><strong>{{ comment.author }}</strong> <small>on {{ comment.created_at.strftime('%H:%M %Y-%m-%d') }}</small></p>
+			 <hr/>
+			{{ comment.text }}
+		{% endfor %}
+	{% endif %}
+	<hr/>
+	<h4>Add a comment</h4>
+	<form action="." method="post">
+		{{ forms.render(form) }}
+		<div class="actions">
+			<input type="submit" id="submit" value="comment">
+		</div>
+	</form>
+	<hr/>
+</div>
+{% endblock %}

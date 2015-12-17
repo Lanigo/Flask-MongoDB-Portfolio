@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	{% block head %}
+		<title>Lani Gouws</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+	{% endblock %}
+	</head>
+	<body>
+		{% block header %}
+		<header>
+			<a href="{{ url_for('website.home') }}"><img class='logo' src="{{ url_for('static', filename='logo.png') }}"/></a>
+			<ul id="menu">
+				<li><a class="menu" href="{{ url_for('website.about') }}">About</a></li>
+				<li><a class="menu" href="{{ url_for('website.projects') }}">Projects</a></li>
+				<li><a class="menu" href="{{ url_for('website.contact') }}">Contact</a></li>
+				<li><a class="menu" href="{{ url_for('posts') }}">Blog</a></li>
+			</ul>
+		</header>
+		{% endblock %}	
+	
+		{% block content %}
+		{% endblock %}
+
+		{% block javascript %}
+		{% endblock %}
+	</body>
+</html>

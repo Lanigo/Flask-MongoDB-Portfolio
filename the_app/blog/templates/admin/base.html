@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+ {% endblock %}
+<body>
+    <header>
+        <div>
+            <a href="{{ url_for('website.home') }}"><img class='logo' src="{{ url_for('static', filename='logo.png') }}"/></a>
+            <ul id ="menu">
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            {%- block content -%}
+            <h2><a href="{{ url_for('admin.index') }}" class="brand">My Blog Admin</a></h2>
+            <li>
+                Create new
+                <span class="caret"></span>
+                <ul class="menu">
+                    {% for type in ('post', 'video', 'image', 'quote') %}
+                    <li><a href="{{ url_for("admin.create", type=type) }}">{{ type|title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </div>
+    </div>
+{%- endblock -%}
+</body>
+

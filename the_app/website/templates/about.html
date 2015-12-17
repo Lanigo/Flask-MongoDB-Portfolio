@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block head %}
+	<title>Lani Gouws</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
+{% block header %}
+<header>
+	<a href="{{ url_for('website.home') }}"><img class='logo' src="{{ url_for('static', filename='logo.png') }}"/></a>
+	<ul id="menu">
+		<li><a class="menu" href="{{ url_for('website.home') }}">Home</a></li>
+		<li><a class="menu" href="{{ url_for('website.projects') }}">Projects</a></li>
+		<li><a class="menu" href="{{ url_for('website.contact') }}">Contact</a></li>
+		<li><a class="menu" href="{{ url_for('posts') }}">Blog</a></li>
+	</ul>
+</header>
+{% endblock %}
+{% block content %}
+<body>
+	<div class="jumbo_about">
+		<h2>About Lani</h2>
+	</div>
+
+	<div class="square_block">
+		<div class="squares">
+			<img src="{{ url_for('static', filename='img/eerste.png') }}" alt="Who I am" title="who-I-am" width="280" height="280"/>
+			<span class="caption">
+				<p class="about"> 
+					I live in picturesque Clarens, South Africa. I have two degrees:  B.Prim.Ed and BA Psych(Honns). <br/>	
+					I used to be a teacher, but that's not my passion.<br/>	
+					In 2008 I was in an accident which took the lives of both my sisters and also my ability to lift my left arm. <br/>	
+					In the years since, I often thought about changing careers to do something I really love.  I really love technology. I really love solving problems.<br/>
+					Now I can't imagine doing anything other than writing code, all day, every day.
+				</p>
+			</span>
+		</div>
+
+		<div class="squares">
+			<img src="{{ url_for('static', filename='img/tweede.png') }}" alt="How I got here" title="how-I-got-here" width="280" height="280"/>
+			<span class="caption">
+				<p class="about">
+					Little over a year ago, I knew nothing about web development.<br/>
+					I was lucky	enough to have some time.<br/>
+					I took care of my landlord's kids and their afternoon activities and homework, so I also had some money.<br/>         
+					I have spent 12-18 hours a day for 13 months learning and building and working towards becoming a self taught developer.<br/>
+					It has taken a lot of dedication, but it's been so much fun!
+				</p>
+			</span>
+		</div>
+
+		<div class="squares">
+			<img src="{{ url_for('static', filename='img/derde.png') }}" alt="What can I do" title="what-can-I-do" width="280" height="280"/>
+			<span class="caption">
+				<p class="about">
+					HTML5, CSS3 and JavaScript is where I started. Along the way I also learned AJAX and JSON. I made sure that I had a solid grasp on vanilla JS, before I also learned jQuery and AngularJS.<br/>    
+					I wanted to make web apps. So, I learned Meteor.js, because it is full-stack.<br/>
+					Next, I wanted to know about the backend. I started learning Python, and loved it.<br/>
+					I tried a little Django, but then I found and fell in love with Flask.  I also learned MongoDB and a little bit of MySQL. Please visit my 
+					<a href="/projects">Projects</a> page.
+				</p>
+			</span>
+		</div>
+
+		<div class="squares">
+			<img src="{{ url_for('static', filename='img/vierde.png') }}" alt="What's next for me" title="what's-next-for-me" width="280" height="280"/>
+			<span class="caption">
+				<p class="about">
+					More learning! Everyday I learn something new. There is so much I still want to know, and be able to do.<br/>
+					Also, I've taken so much from open source resources that it's only right to give some back. That is what I'd like to do through my 
+					<a href="/posts">blog</a> and contributing to open source projects.<br/>
+					Then I'd also like a j.o.b. please!<br/>
+					If you would like to work with me, please see my 
+					<a href="/contact">Contact</a> page or find me on social media.
+				</p>
+			</span>
+		</div>
+	</div>
+</body>	
+{% endblock %}
+	{% block javascript %}
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="{{url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+		<script src="{{url_for('static', filename='js/about.js') }}"></script>
+	{% endblock %}
+</body>

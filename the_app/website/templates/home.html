@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block header %}
+<header>
+	<a href="{{ url_for('website.home') }}"><img class='logo' src="{{ url_for('static', filename='logo.png') }}"/></a>
+	<ul id="menu">
+		<li><a class="menu" href="{{ url_for('website.about') }}">About</a></li>
+		<li><a class="menu" href="{{ url_for('website.projects') }}">Projects</a></li>
+		<li><a class="menu" href="{{ url_for('website.contact') }}">Contact</a></li>
+		<li><a class="menu" href="{{ url_for('posts') }}">Blog</a></li>
+	</ul>
+</header>
+{% endblock %}
+
+{% block content %}
+<body>
+	<div class="jumbo">
+		<div class="jumbo1">
+			<h2>Welcome!</h2>
+			<h3>Have a look around.</h3>
+			<p>Hi. My name is Lani. I am a self taught 	web developer. Coding is something I only discovered a little more than a year ago, but it's my favourite thing in the world.</p>
+			<p>All of this is the result of, at least 12 hours of work a day over a year</p>
+			<p>Have a look at my 
+			<a href="/projects">Projects</a> page. Read more <a href="/about">About</a> my journey. Read my <a href="/posts">Blog</a>, with hopefully useful advice for new developers. When you've done all that drop me an email on my <a href="/contact">Contact</a> page.</p>
+		</div>
+		<div class="jumbo2">
+			<h4>Find me here:</h4>
+			<a href="https://github.com/Lanigo">
+				<img class='contact' src="{{ url_for('static', filename='Octocat.jpg') }}"/>
+			</a>
+			<a href="https://twitter.com/lanigouws1">
+				<img class='contact' src="{{ url_for('static', filename='TwitterLogo_#55acee.png') }}"/>
+			</a>
+			<a href="https://www.facebook.com/lani.gouws">
+				<img class='contact' src="{{ url_for('static', filename='FB-f-Logo__blue_144.png') }}"/>
+			</a>
+		</div>
+		<div class="jumbo3">
+			<h3>About this Site</h3>
+			<p>I hand-coded this site. This site was created using Python <a href="http://flask.pocoo.org/">Flask</a> and <a href="https://www.mongodb.org/">MongoDB</a>. Flask fit well, because I like the fact that is a microframework, and therefor not bloated, but so easy to extend as needed. I chose MongoDB as I only needed a database for the blog posts and comments. That is why I went with a NoSQL dbms.</p>
+			<p>This site also uses two jQuery plugins: 
+			<a href="https://github.com/codrops/Slicebox">Slicebox: The jQuery 3D image slider</a> by <a href=" http://www.codrops.com">codrops</a> and <a href="https://github.com/gdsmith/jquery.easing">jquery-easing v1.3</a> by <a href="http://gsgd.co.uk/">GSGD</a></p>
+		</div>
+		<div class="footer">
+			<p class="footer">Created and maintained by Lani Gouws &#169; 2015.</p>
+		</div>
+	</div>
+</body>
+{% endblock %}
